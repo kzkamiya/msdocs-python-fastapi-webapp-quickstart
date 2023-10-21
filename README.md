@@ -37,3 +37,14 @@ http://127.0.0.1:8000/
 ## Next Steps
 
 To learn more about FastAPI, see [FastAPI](https://fastapi.tiangolo.com/).
+
+## Azure App Service for Linux
+
+To launch FastAPI on Azure App Service for Linux, modify the startup.sh as follows and set the Start command to startup.sh.
+
+startup.sh
+```
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
+```
+
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/248463/abfb3c5e-6f82-913f-f247-bfee69f0eea6.png)
